@@ -1,29 +1,39 @@
-[
-  {
-    "id": 1,
-    "name": "Alex Riveira",
-    "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=AR",
-    "role": "Lead Astrophysicist & Data Scientist",
-    "age": 34,
-    "email": "alex.r@nearspace.dev",
-    "aspirations": "Descubrir un exoplaneta análogo a la Tierra y desarrollar IA que pueda predecir zonas habitables en la galaxia."
-  },
-  {
-    "id": 2,
-    "name": "Beatriz Vargas",
-    "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=BV",
-    "role": "Senior Software Engineer & AI Specialist",
-    "age": 29,
-    "email": "beatriz.v@nearspace.dev",
-    "aspirations": "Construir sistemas autónomos para el análisis de datos telescópicos y liderar el desarrollo del próximo gran observatorio virtual."
-  },
-  {
-    "id": 3,
-    "name": "Carlos Mendoza",
-    "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=CM",
-    "role": "UI/UX Designer & Frontend Developer",
-    "age": 31,
-    "email": "carlos.m@nearspace.dev",
-    "aspirations": "Crear las interfaces más intuitivas y bellas para la visualización de datos científicos complejos, haciendo la ciencia accesible para todos."
-  }
-]
+{
+  "teamName": "NearSpace Team",
+  "description": "Somos un grupo multidisciplinario apasionado por la exploración espacial, la ciencia de datos y el diseño de experiencias que acerquen la astronomía a todas las personas.",
+  "location": "Barranquilla, Colombia",
+  "members": [
+    {
+      "id": 1,
+      "name": "Alex Riveira",
+      "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=AR",
+      "profession": "Lead Astrophysicist & Data Scientist",
+      "bio": "Especialista en dinámica orbital y modelado de atmósferas exoplanetarias. Lidera la integración de IA para acelerar el descubrimiento de planetas habitables.",
+      "socials": {
+        "github": "https://github.com/alex-riveira",
+        "linkedin": "https://www.linkedin.com/in/alex-riveira/"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Beatriz Vargas",
+      "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=BV",
+      "profession": "Senior Software Engineer & AI Specialist",
+      "bio": "Diseña pipelines de visión computacional para telescopios automatizados y dirige la arquitectura de servicios que permiten el análisis en tiempo real.",
+      "socials": {
+        "github": "https://github.com/beatriz-vargas",
+        "linkedin": "https://www.linkedin.com/in/beatriz-vargas/"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Carlos Mendoza",
+      "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=CM",
+      "profession": "UI/UX Designer & Frontend Developer",
+      "bio": "Transforma datos científicos complejos en interfaces inmersivas. Lidera la narrativa visual del observatorio virtual NearSpace.",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/carlos-mendoza-uiux/"
+      }
+    }
+  ]
+}
