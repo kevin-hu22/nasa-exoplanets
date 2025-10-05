@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Alex Riveira",
+    "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=AR",
+    "role": "Lead Astrophysicist & Data Scientist",
+    "age": 34,
+    "email": "alex.r@nearspace.dev",
+    "aspirations": "Descubrir un exoplaneta análogo a la Tierra y desarrollar IA que pueda predecir zonas habitables en la galaxia."
+  },
+  {
+    "id": 2,
+    "name": "Beatriz Vargas",
+    "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=BV",
+    "role": "Senior Software Engineer & AI Specialist",
+    "age": 29,
+    "email": "beatriz.v@nearspace.dev",
+    "aspirations": "Construir sistemas autónomos para el análisis de datos telescópicos y liderar el desarrollo del próximo gran observatorio virtual."
+  },
+  {
+    "id": 3,
+    "name": "Carlos Mendoza",
+    "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=CM",
+    "role": "UI/UX Designer & Frontend Developer",
+    "age": 31,
+    "email": "carlos.m@nearspace.dev",
+    "aspirations": "Crear las interfaces más intuitivas y bellas para la visualización de datos científicos complejos, haciendo la ciencia accesible para todos."
+  }
+]
