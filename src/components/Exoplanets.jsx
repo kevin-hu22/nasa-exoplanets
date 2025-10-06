@@ -1,4 +1,4 @@
-import CarrouselSlick from "./carrouselSlick.jsx";
+import CarrouselSlick from "./CarrouselSlick.jsx";
 import useApiData from "../hooks/useApiData";
 import DataTable from "./DataTable.jsx";
 import { Loader } from "./ui/Loader";
