@@ -9,7 +9,6 @@ import Navbar from './components/Navbar';
 import TeamModal from './components/TeamModal';
 import Exoplanets from './components/Exoplanets';
 import Home from './components/Home';
-import About from './components/About';
 
 function App() {
   
@@ -23,14 +22,9 @@ function App() {
   return (
     <>
       {/* Example navigation links */}
-      <nav style={{ display: 'flex', gap: '1rem', marginBottom: '1rem' }}>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/exoplanets">Exoplanets</Link>
-      </nav>
+      <StarfieldBackground />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
         <Route path="/exoplanets" element={<Exoplanets />} />
       </Routes>
     </>

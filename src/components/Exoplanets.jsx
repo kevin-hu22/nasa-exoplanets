@@ -5,7 +5,6 @@ import DataTable from "./DataTable.jsx";
 import { useCallback, useState } from "react";
 import { Loader } from "./ui/Loader";
 import { ErrorMessage } from "./ui/ErrorMessage";
-import StarfieldBackground from "./ui/StarfieldBackground";
 import Navbar from "./Navbar";
 import TeamModal from "./TeamModal";
 
@@ -21,7 +20,7 @@ const Exoplanets = () => {
   const shouldHideMainContent = isTeamModalOpen;
   return (
     <main className="min-h-screen p-4 md:p-8 font-sans relative z-10">
-      <StarfieldBackground />
+      
       <div className="container mx-auto">
         <header
           className={`my-2 transition-all duration-300 block ${
