@@ -1,4 +1,3 @@
-// src/components/DataTable.jsx
 import React, { useState, useMemo } from 'react';
 import {
   useReactTable,
@@ -11,42 +10,26 @@ import {
 } from '@tanstack/react-table';
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 
-
-const DataTable = ({ data }) => {
+const DataTable = ({ data, onRowClick }) => {
   const [sorting, setSorting] = useState([]);
   const [globalFilter, setGlobalFilter] = useState('');
 
   const columnHelper = createColumnHelper()
 
-  // Definimos las columnas basados en el JSON de ejemplo
   const columns = useMemo(() => [
-    columnHelper.accessor('id', {
-      header: 'ID',
-    }),
-    columnHelper.accessor('name', {
-      header: 'Name',
-    }),
-    columnHelper.accessor(row => row.label ? row.label === 1 ? 'CONFIRMED' : 'FALSE POSITIVE' : 'CANDIDATE', {
-      header: 'Disposition',
-    }),    
-    columnHelper.accessor('period', {
-      header: 'Period (days)'
-    }),
-    columnHelper.accessor('prad', {
-      header: ' Stellar Radius [Solar radii] (R⊕)'
-    }),
-    columnHelper.accessor('st_teff', {
-      header: 'Stellar Effective Temperature (K)'
-    }),
-    columnHelper.accessor('source', {
-      header: 'Source'
-    }),
-    columnHelper.accessor('ra', {
-      header: 'RA [decimal degrees]'
-    }),
-    columnHelper.accessor('dec', {
-      header: 'Dec [decimal degrees]'
-    }),
+    columnHelper.accessor('id', { header: 'ID' }),
+    columnHelper.accessor('name', { header: 'Name' }),
+    columnHelper.accessor(row => {
+      if (row.label === 1) return 'Confirmed';
+      if (row.label === 0) return 'False Positive';
+      return 'Candidate';
+    }, { header: 'Disposition' }),
+    columnHelper.accessor('period', { header: 'Period (days)' }),
+    columnHelper.accessor('prad', { header: ' Stellar Radius [Solar radii] (R⊕)' }),
+    columnHelper.accessor('st_teff', { header: 'Stellar Effective Temperature (K)' }),
+    columnHelper.accessor('source', { header: 'Source' }),
+    columnHelper.accessor('ra', { header: 'RA [decimal degrees]' }),
+    columnHelper.accessor('dec', { header: 'Dec [decimal degrees]' }),
   ], [columnHelper]);
 
   const table = useReactTable({
@@ -63,7 +46,6 @@ const DataTable = ({ data }) => {
 
   return (
     <div className="glass-pane p-4 md:p-6 shadow-2xl mt-6">
-      {/* Controles: Buscador y Filtros */}
       <div className="flex items-center justify-between mb-4">
         <h2 className={'text-left text-3xl font-bold text-white mb-6'}>
         Explore the exoplanet catalog
@@ -77,7 +59,6 @@ const DataTable = ({ data }) => {
         />
       </div>
 
-      {/* Tabla */}
       <div className="overflow-x-auto">
         <table className="w-full text-left">
           <thead className="border-b border-slate-700">
@@ -99,27 +80,25 @@ const DataTable = ({ data }) => {
           </thead>
           <tbody>
             {table.getRowModel().rows.map(row => {
-               return (
-              <tr key={row.id} className="hover:bg-space-blue/60 transition-colors duration-200 cursor-pointer border-b border-slate-800" onClick={() => alert(`Clickeado el objeto: ${row.original.name}`)}>
-                {row.getVisibleCells().map(cell => (
-                  <td key={cell.id} className="p-4">
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </td>
-                ))}
-              </tr>
+              return (
+                <tr 
+                  key={row.id} 
+                  className="hover:bg-space-blue/60 transition-colors duration-200 cursor-pointer border-b border-slate-800" 
+                  onClick={() => onRowClick(row.original)} 
+                >
+                  {row.getVisibleCells().map(cell => (
+                    <td key={cell.id} className="p-4">
+                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                    </td>
+                  ))}
+                </tr>
             )})}
           </tbody>
         </table>
       </div>
 
-       {/* Paginación */}
       <div className="flex items-center justify-between mt-6 text-sm text-accent-light">
-        <span>
-          Página{' '}
-          <strong>
-            {table.getState().pagination.pageIndex + 1} de {table.getPageCount()}
-          </strong>
-        </span>
+        <span>Página{' '}<strong>{table.getState().pagination.pageIndex + 1} de {table.getPageCount()}</strong></span>
         <div className="flex items-center gap-2">
           <button onClick={() => table.setPageIndex(0)} disabled={!table.getCanPreviousPage()} className="px-3 py-1 rounded-md bg-space-blue hover:bg-accent-cyan hover:text-space-dark disabled:opacity-50 disabled:cursor-not-allowed transition-colors">« First</button>
           <button onClick={() => table.previousPage()} disabled={!table.getCanPreviousPage()} className="px-3 py-1 rounded-md bg-space-blue hover:bg-accent-cyan hover:text-space-dark disabled:opacity-50 disabled:cursor-not-allowed transition-colors">Previous</button>

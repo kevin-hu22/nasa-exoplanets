@@ -1,8 +1,8 @@
 import React from "react";
 
 const logos = [
-  { src: "/src/assets/imgs/Logo Near space.png", alt: "Logo 1" },
-  { src: "/src/assets/imgs/Space_Apps__White.png", alt: "Logo 2" },
+  { src: "/Logo Near space.png", alt: "Logo 1" },
+  { src: "/Space_Apps__White.png", alt: "Logo 2" },
   // Agrega más logos aquí si lo necesitas
 ];
 

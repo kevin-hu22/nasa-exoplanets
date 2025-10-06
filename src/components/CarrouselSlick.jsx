@@ -4,7 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import planetsRaw from "../services/kepler_simple.json";
 
-const CarrouselSlick = () => {
+// 1. Acepta 'onPlanetClick' como prop
+const CarrouselSlick = ({ onPlanetClick }) => {
   
   // Mezclamos y tomamos 7 solo una vez
   const planets = useMemo(() => {
@@ -12,10 +13,7 @@ const CarrouselSlick = () => {
     return shuffled.slice(0, 7);
   }, []);
 
-  const handlePlanetClick = (planet) => {
-    alert(`Has hecho clic en el exoplaneta: ${planet.name}`);
-    console.log("Planet data:", planet);
-  };
+  // 2. Ya no necesitamos 'handlePlanetClick' aquí, se manejará en el padre.
 
   const settings = {
     dots: false,
@@ -46,14 +44,15 @@ const CarrouselSlick = () => {
     margin: "0 auto",
   };
   const textStyle = { color: "#fff", marginTop: "10px" };
+  
   return (
     <div style={{ padding: "20px" }}>
-      
       <Slider {...settings}>
         {planets.map((planet, idx) => (
           <div
             key={`${planet.name}-${idx}`}
-            onClick={() => handlePlanetClick(planet)}
+            // 3. Llama a la función del prop en el evento onClick
+            onClick={() => onPlanetClick(planet)}
           >
             <div style={slideStyle}>
               <img
@@ -66,7 +65,6 @@ const CarrouselSlick = () => {
           </div>
         ))}
       </Slider>
-
     </div>
   );
 };

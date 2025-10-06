@@ -5,64 +5,68 @@
   "members": [
     {
       "id": 1,
-      "name": "Alex Riveira",
-      "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=AR",
-      "profession": "Lead Astrophysicist & Data Scientist",
-      "bio": "Especialista en dinámica orbital y modelado de atmósferas exoplanetarias. Lidera la integración de IA para acelerar el descubrimiento de planetas habitables.",
+      "name": "Kevin Ranier Urrea Hernandez",
+      "photoUrl": "https://media.licdn.com/dms/image/v2/D4E03AQEBiUetAiTW8w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1692064824843?e=1762387200&v=beta&t=tgbqtd-nN-GDB1PRjI8-PCisIQ5ukFNZYymNgvY496U",
+      "profession": "Systems Engineering student & Web Developer",
+      "bio": "Front-End Web Developer and Software Programming Technician, currently studying Systems Engineering. Contributes to the team with experience in web design and development.",
       "socials": {
-        "github": "https://github.com/alex-riveira",
-        "linkedin": "https://www.linkedin.com/in/alex-riveira/"
+        "github": "https://github.com/kevin-hu22",
+        "linkedin": "https://www.linkedin.com/in/kevin-urrea-desarrolladorwebfrontend/"
       }
     },
     {
       "id": 2,
-      "name": "Beatriz Vargas",
-      "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=BV",
-      "profession": "Senior Software Engineer & AI Specialist",
-      "bio": "Diseña pipelines de visión computacional para telescopios automatizados y dirige la arquitectura de servicios que permiten el análisis en tiempo real.",
+      "name": "Keitlyn Vanessa Peralta Romero",
+      "photoUrl": "https://media.licdn.com/dms/image/v2/D4E03AQG7upZcoz-oKg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1719602334247?e=1762387200&v=beta&t=Np_N-cqvTf8z-8sK7USPMy-CkqIcdJXVKKrOuuCUCDY",
+      "profession": "Industrial Engineering student",
+      "bio": "Industrial Engineering student with experience in project management and administration. Contributes to the team with strong leadership, organizational skills, and a focus on process optimization.",
       "socials": {
-        "github": "https://github.com/beatriz-vargas",
-        "linkedin": "https://www.linkedin.com/in/beatriz-vargas/"
+        "github": " ",
+        "linkedin": "https://www.linkedin.com/in/keitlyn-peralta-ingeniera-industrial/"
       }
-    },
+    },    
     {
       "id": 3,
-      "name": "Carlos Mendoza",
-      "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=CM",
-      "profession": "UI/UX Designer & Frontend Developer",
-      "bio": "Transforma datos científicos complejos en interfaces inmersivas. Lidera la narrativa visual del observatorio virtual NearSpace.",
+      "name": "Esteban Alejandro Padilla Padilla",
+      "photoUrl": "https://media.licdn.com/dms/image/v2/D4E03AQElTFtwhvlzzA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1719586030792?e=1762387200&v=beta&t=PlXhcjbfQmKg3yS335wNRRifUHfH6j4_tUekb6LKpes",
+      "profession": "Systems Engineering student & Web Developer",
+      "bio": "Web Developer specialized in Next.js, NestJS, and TypeScript, currently studying Systems Engineering. Brings strong backend development skills and an analytical approach to solving technical challenges, contributing to robust, scalable, and efficient web solutions.",
       "socials": {
-        "linkedin": "https://www.linkedin.com/in/carlos-mendoza-uiux/"
+        "github": "https://github.com/EstebanAP1",
+        "linkedin": "https://www.linkedin.com/in/esteban-padilla-webdev/"
       }
     },
     {
       "id": 4,
-      "name": "Carlos Mendoza",
-      "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=CM",
-      "profession": "UI/UX Designer & Frontend Developer",
-      "bio": "Transforma datos científicos complejos en interfaces inmersivas. Lidera la narrativa visual del observatorio virtual NearSpace.",
+      "name": " Einner Adrian Ariña Muñoz",
+      "photoUrl": "https://media.licdn.com/dms/image/v2/D4D03AQGMx6RpRu74KQ/profile-displayphoto-shrink_800_800/B4DZXUsw.xHkAc-/0/1743030260023?e=1762387200&v=beta&t=aHONaeL1daTd7T90EJjSOLjvab2LWJO6Oo94_4ib2MQ",
+      "profession": "Systems Engineering student",
+      "bio": "Systems Engineering student with a versatile skill set, supporting the team across multiple areas. Contributes through effective information research and the automation of data mining processes, helping streamline workflows.",
       "socials": {
-        "linkedin": "https://www.linkedin.com/in/carlos-mendoza-uiux/"
+        "github": "https://github.com/N3Txu",
+        "linkedin": "https://www.linkedin.com/in/einnerarina/"
       }
     },
     {
       "id": 5,
-      "name": "Carlos Mendoza",
+      "name": "Cristian Camilo Padilla Padilla",
       "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=CM",
-      "profession": "UI/UX Designer & Frontend Developer",
-      "bio": "Transforma datos científicos complejos en interfaces inmersivas. Lidera la narrativa visual del observatorio virtual NearSpace.",
+      "profession": "Student",
+      "bio": "High school student focused on information analysis, research, and writing. Supports the team by organizing data and creating clear, well-structured reports to aid in project understanding and decision-making.",
       "socials": {
-        "linkedin": "https://www.linkedin.com/in/carlos-mendoza-uiux/"
+        "github": " ",
+        "linkedin": " "
       }
     },
     {
       "id": 6,
-      "name": "Carlos Mendoza",
-      "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=CM",
-      "profession": "UI/UX Designer & Frontend Developer",
-      "bio": "Transforma datos científicos complejos en interfaces inmersivas. Lidera la narrativa visual del observatorio virtual NearSpace.",
+      "name": "Jose David Rodriguez Contreras",
+      "photoUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFrllpTCfbS0Q/profile-displayphoto-shrink_200_200/B4DZS_G7P1HAAY-/0/1738373051817?e=1762387200&v=beta&t=3oP68Z2ZWHj1tz578MT68Zai-gFd2BOePT4Gw1mh4Ws",
+      "profession": "Student",
+      "bio": "Student programmer with experience in developing modern and scalable web applications. Skilled in HTML, CSS, JavaScript, and frameworks such as React, Vite, and Node.js, contributing to the team’s front-end and back-end development efforts.",
       "socials": {
-        "linkedin": "https://www.linkedin.com/in/carlos-mendoza-uiux/"
+        "github": "https://github.com/JoseDevRc",
+        "linkedin": "https://www.linkedin.com/in/jose-david-rodriguez-contreras-a118ab34a/"
       }
     }
   ]
