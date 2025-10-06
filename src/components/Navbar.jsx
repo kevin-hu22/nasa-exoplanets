@@ -21,10 +21,13 @@ const Navbar = ({ onNearSpaceTeamClick, isHidden = false }) => {
 
       <div className="mx-auto flex w-full max-w-3xl items-center justify-center gap-4 rounded-full px-6 py-3 backdrop-blur-xl">
         <button type="button" className={buttonBaseClasses}>
-          Exoplanet Detection with AI
+          Exoplanets Catalog
+        </button>
+        <button type="button" className={buttonBaseClasses}>
+          Detection with AI
         </button>
         <button type="button" onClick={onNearSpaceTeamClick} className={buttonBaseClasses}>
-          NearSpace Team
+          About Near Space
         </button>
       </div>
     </nav>

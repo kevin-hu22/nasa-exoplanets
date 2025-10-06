@@ -7,7 +7,7 @@ const TeamMemberCard = ({ member }) => {
   const { name, photoUrl, profession, bio, socials } = member;
 
   return (
-    <article className="flex flex-col gap-6 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/20 backdrop-blur-2xl transition-transform duration-300 hover:-translate-y-1">
+    <article className="flex flex-col gap-6 rounded-3xl border border-white/10 bg-white/5 p-4 shadow-xl shadow-black/20 backdrop-blur-2xl transition-transform duration-300 hover:-translate-y-1">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
         <img
           src={photoUrl}

@@ -78,7 +78,7 @@ const TeamModal = ({ isOpen, onClose }) => {
     >
       <div className="absolute " />
 
-      <div className="relative z-10 w-full max-w-4xl overflow-hidden rounded-3xl border border-white/10 bg-white/10 shadow-2xl shadow-black/30 backdrop-blur-3xl">
+      <div className="relative z-10 w-full max-w-4xl overflow-hidden rounded-3xl border border-white/10 bg-white/10 shadow-2xl shadow-black/30 backdrop-blur-1xl">
         <button
           type="button"
           onClick={onClose}

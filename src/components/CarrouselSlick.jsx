@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import planetsRaw from "../services/kepler_simple.json";
 
 const CarrouselSlick = () => {
+  
   // Mezclamos y tomamos 7 solo una vez
   const planets = useMemo(() => {
     const shuffled = [...planetsRaw].sort(() => 0.5 - Math.random());
