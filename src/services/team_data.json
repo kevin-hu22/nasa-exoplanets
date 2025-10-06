@@ -1,6 +1,6 @@
 {
-  "teamName": "NearSpace Team",
-  "description": "Somos un grupo multidisciplinario apasionado por la exploración espacial, la ciencia de datos y el diseño de experiencias que acerquen la astronomía a todas las personas.",
+  "teamName": "Near Space",
+  "description": "Is a multidisciplinary group passionate about space exploration, science, and sustainable technology. We combine data analysis, creative design, and software development",
   "location": "Barranquilla, Colombia",
   "members": [
     {
@@ -27,6 +27,36 @@
     },
     {
       "id": 3,
+      "name": "Carlos Mendoza",
+      "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=CM",
+      "profession": "UI/UX Designer & Frontend Developer",
+      "bio": "Transforma datos científicos complejos en interfaces inmersivas. Lidera la narrativa visual del observatorio virtual NearSpace.",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/carlos-mendoza-uiux/"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Carlos Mendoza",
+      "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=CM",
+      "profession": "UI/UX Designer & Frontend Developer",
+      "bio": "Transforma datos científicos complejos en interfaces inmersivas. Lidera la narrativa visual del observatorio virtual NearSpace.",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/carlos-mendoza-uiux/"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Carlos Mendoza",
+      "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=CM",
+      "profession": "UI/UX Designer & Frontend Developer",
+      "bio": "Transforma datos científicos complejos en interfaces inmersivas. Lidera la narrativa visual del observatorio virtual NearSpace.",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/carlos-mendoza-uiux/"
+      }
+    },
+    {
+      "id": 6,
       "name": "Carlos Mendoza",
       "photoUrl": "https://placehold.co/150x150/1e293b/94a3b8?text=CM",
       "profession": "UI/UX Designer & Frontend Developer",

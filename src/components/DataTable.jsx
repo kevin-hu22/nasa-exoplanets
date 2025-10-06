@@ -7,22 +7,47 @@ import {
   getPaginationRowModel,
   getFilteredRowModel,
   flexRender,
+  createColumnHelper,
 } from '@tanstack/react-table';
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
+
 
 const DataTable = ({ data }) => {
   const [sorting, setSorting] = useState([]);
   const [globalFilter, setGlobalFilter] = useState('');
 
+  const columnHelper = createColumnHelper()
+
   // Definimos las columnas basados en el JSON de ejemplo
   const columns = useMemo(() => [
-    { accessorKey: 'name', header: 'Name' },
-    { accessorKey: 'disc_year_u', header: 'Año Desc.' },
-    { accessorKey: 'period', header: 'Periodo (días)' },
-    { accessorKey: 'prad', header: 'Radio Planeta (R⊕)' },
-    { accessorKey: 'st_teff', header: 'Temp. Estrella (K)'},
-    { accessorKey: 'source', header: 'Fuente' },
-  ], []);
+    columnHelper.accessor('id', {
+      header: 'ID',
+    }),
+    columnHelper.accessor('name', {
+      header: 'Name',
+    }),
+    columnHelper.accessor(row => row.label ? row.label === 1 ? 'CONFIRMED' : 'FALSE POSITIVE' : 'CANDIDATE', {
+      header: 'Disposition',
+    }),    
+    columnHelper.accessor('period', {
+      header: 'Period (days)'
+    }),
+    columnHelper.accessor('prad', {
+      header: ' Stellar Radius [Solar radii] (R⊕)'
+    }),
+    columnHelper.accessor('st_teff', {
+      header: 'Stellar Effective Temperature (K)'
+    }),
+    columnHelper.accessor('source', {
+      header: 'Source'
+    }),
+    columnHelper.accessor('ra', {
+      header: 'RA [decimal degrees]'
+    }),
+    columnHelper.accessor('dec', {
+      header: 'Dec [decimal degrees]'
+    }),
+  ], [columnHelper]);
 
   const table = useReactTable({
     data,
@@ -37,9 +62,12 @@ const DataTable = ({ data }) => {
   });
 
   return (
-    <div className="glass-pane p-4 md:p-6 shadow-2xl">
+    <div className="glass-pane p-4 md:p-6 shadow-2xl mt-6">
       {/* Controles: Buscador y Filtros */}
       <div className="flex items-center justify-between mb-4">
+        <h2 className={'text-left text-3xl font-bold text-white mb-6'}>
+        Explore the exoplanet catalog
+      </h2>
         <input
           type="text"
           value={globalFilter ?? ''}
@@ -56,7 +84,7 @@ const DataTable = ({ data }) => {
             {table.getHeaderGroups().map(headerGroup => (
               <tr key={headerGroup.id}>
                 {headerGroup.headers.map(header => (
-                  <th key={header.id} className="p-4 cursor-pointer select-none" onClick={header.column.getToggleSortingHandler()}>
+                  <th key={header.id} className="px-4 py-2 max-w-32 cursor-pointer select-none" onClick={header.column.getToggleSortingHandler()}>
                     <div className="flex items-center gap-2">
                       {flexRender(header.column.columnDef.header, header.getContext())}
                       {{
@@ -70,7 +98,8 @@ const DataTable = ({ data }) => {
             ))}
           </thead>
           <tbody>
-            {table.getRowModel().rows.map(row => (
+            {table.getRowModel().rows.map(row => {
+               return (
               <tr key={row.id} className="hover:bg-space-blue/60 transition-colors duration-200 cursor-pointer border-b border-slate-800" onClick={() => alert(`Clickeado el objeto: ${row.original.name}`)}>
                 {row.getVisibleCells().map(cell => (
                   <td key={cell.id} className="p-4">
@@ -78,7 +107,7 @@ const DataTable = ({ data }) => {
                   </td>
                 ))}
               </tr>
-            ))}
+            )})}
           </tbody>
         </table>
       </div>

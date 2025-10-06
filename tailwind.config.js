@@ -14,8 +14,8 @@ export default {
         'accent-light': '#94a3b8', // Texto secundario
       },
       fontFamily: {
-        'sans': ['Inter', 'sans-serif'], // Tipografía moderna
-      }
+        sans: ['"Nunito"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
     },
   },
   plugins: [],

@@ -1,17 +1,63 @@
 /* src/styles/index.css */
+/* stylelint-disable at-rule-no-unknown */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* stylelint-enable at-rule-no-unknown */
 
-body {
-  background-color: #0f172a; /* space-dark */
-  background-image: url('/path/to/your/space-background.jpg'); /* Opcional: una imagen de fondo sutil */
-  background-size: cover;
-  color: #e2e8f0; /* Color de texto por defecto */
-}
-
-@layer components {
-  .glass-pane {
-    @apply bg-space-blue bg-opacity-40 backdrop-blur-lg rounded-xl border border-slate-700;
+/* 1) Base: aplica Nunito globalmente vía Tailwind */
+@layer base {
+  html {
+    @apply font-sans;
+    font-optical-sizing: auto; /* para la variable font de Nunito */
+  }
+  body {
+    background-color: #0f172a; /* space-dark */
+    background-size: cover;
+    color: #e2e8f0;
+    font-size: 1em;
+    font-family: "Nunito", sans-serif;
   }
 }
+
+/* 2) Components */
+@layer components {
+  .glass-pane {
+    @apply bg-space-blue/40 backdrop-blur-lg rounded-xl border border-slate-700;
+  }
+}
+
+/* 3) Utilidades específicas */
+.nunito-Font {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* "normal" => 400 */
+  font-style: normal;
+}
+
+.slick-slide img {
+  height: 250px !important;
+  width: 100%;
+  object-fit: contain; /* opcional, mejora el render */
+}
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #5a5f73 #0c111e;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #0c111e;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #5a5f73;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }

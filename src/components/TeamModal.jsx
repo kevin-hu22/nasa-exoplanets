@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import { IoClose } from 'react-icons/io5';
-import { HiOutlineMapPin } from 'react-icons/hi2';
-import TeamMemberCard from './TeamMemberCard';
-import { Loader } from './ui/Loader';
+import { useEffect, useState } from "react";
+import { IoClose } from "react-icons/io5";
+import { HiOutlineMapPin } from "react-icons/hi2";
+import TeamMemberCard from "./TeamMemberCard";
+import { Loader } from "./ui/Loader";
 
 const TeamModal = ({ isOpen, onClose }) => {
   const [teamData, setTeamData] = useState(null);
@@ -18,7 +18,7 @@ const TeamModal = ({ isOpen, onClose }) => {
     setIsLoading(true);
     setHasError(false);
 
-    import('../services/team_data.json')
+    import("../services/team_data.json")
       .then((module) => {
         if (isMounted) {
           setTeamData(module.default);
@@ -46,15 +46,15 @@ const TeamModal = ({ isOpen, onClose }) => {
     }
 
     const handleKeyDown = (event) => {
-      if (event.key === 'Escape') {
+      if (event.key === "Escape") {
         onClose();
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isOpen, onClose]);
 
@@ -76,7 +76,7 @@ const TeamModal = ({ isOpen, onClose }) => {
       aria-modal="true"
       aria-labelledby="team-modal-title"
     >
-      <div className="absolute inset-0 bg-slate-950/70 backdrop-blur-2xl" />
+      <div className="absolute " />
 
       <div className="relative z-10 w-full max-w-4xl overflow-hidden rounded-3xl border border-white/10 bg-white/10 shadow-2xl shadow-black/30 backdrop-blur-3xl">
         <button
@@ -97,21 +97,28 @@ const TeamModal = ({ isOpen, onClose }) => {
 
           {!isLoading && hasError && (
             <p className="text-center text-base text-red-200">
-              Hubo un problema al cargar la información del equipo. Intenta nuevamente.
+              There was a problem loading your team information. Please try
+              again.
             </p>
           )}
 
           {!isLoading && !hasError && teamData && (
             <div className="space-y-6 text-white">
-              <div className="space-y-4 text-center">
-                <h2 id="team-modal-title" className="text-3xl font-bold tracking-tight text-white">
+              <div className="space-y-4 text-center mb-10">
+                <h2
+                  id="team-modal-title"
+                  className="text-5xl font-bold tracking-tight text-white"
+                >
                   {teamData.teamName}
                 </h2>
-                <p className="mx-auto max-w-2xl text-base text-slate-100/80">
+                <p className="mx-auto max-w-2xl text-base font-thin text-slate-100/80">
                   {teamData.description}
                 </p>
-                <div className="flex items-center justify-center gap-2 text-sm text-accent-light">
-                  <HiOutlineMapPin className="text-lg text-accent-cyan" aria-hidden="true" />
+                <div className="flex items-center justify-center gap-2 text-sm text-fff">
+                  <HiOutlineMapPin
+                    className="text-lg text-fff"
+                    aria-hidden="true"
+                  />
                   <span>{teamData.location}</span>
                 </div>
               </div>

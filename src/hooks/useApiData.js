@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import mockData from '../services/mock_data.json'; 
 
 const useApiData = (apiUrl) => {
   const [data, setData] = useState([]);
@@ -17,10 +16,7 @@ const useApiData = (apiUrl) => {
         const response = await axios.get(apiUrl);
         setData(response.data.items);
         
-        setTimeout(() => { 
-          setData(mockData.items);
-          setIsLoading(false);
-        }, 500);
+        setIsLoading(false);
 
       } catch (err) {
         setError('Error contacting TESS. Please try again.');
